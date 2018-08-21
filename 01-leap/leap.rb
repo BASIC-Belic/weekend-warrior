@@ -8,7 +8,4 @@ def leap_year?(year = nil)
     return true
   elsif year % 100 == 0 && year % 400 == 0
     return true
-  else
-    return false
-  end
 end
