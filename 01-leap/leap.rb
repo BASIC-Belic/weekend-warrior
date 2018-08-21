@@ -11,6 +11,12 @@
 #   end
 # end
 
+#one line
+# def leap_year?(year = nil)
+# return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0
+# end
+
+#ternary
 def leap_year?(year = nil)
-return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0
+return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? true : false 
 end
