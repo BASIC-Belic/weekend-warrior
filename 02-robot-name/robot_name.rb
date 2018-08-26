@@ -13,8 +13,6 @@ class Robot
 
   def reset
 
-    robot = Robot.new
-
     @name = (Array('A'..'Z').sample(2) + Array(0..9).sample(3)).join
 
   end
