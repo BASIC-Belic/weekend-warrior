@@ -18,3 +18,12 @@ class Hamming
   end
 
 end
+
+# #another way to do the loop 
+# #.zip Converts any arguments to arrays, then merges elements of self with corresponding elements from each argument.
+# #can .zip together multiple arrays
+# string1.zip(string2).each do |letter1, letter2|
+#   if letter1 != letter2
+#     counter+=1
+#   end
+# end
