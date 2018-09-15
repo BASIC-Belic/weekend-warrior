@@ -1,6 +1,6 @@
-def words(string)
+def words(string_of_words)
 
-  words = string.split(" ")
+  words = string_of_words.split(" ")
   word_hashes = {}
 
   words.each do |word|
