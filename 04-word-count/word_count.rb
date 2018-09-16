@@ -5,11 +5,11 @@ def words(string_of_words)
 
   words.each do |word|
 
-    if word_hashes.key?("#{word}")
-      word_hashes["#{word}"] += 1
+    if word_hashes.key?(word)
+      word_hashes[word] += 1
     else
       # word_hashes.merge!(word: 1)
-      word_hashes.store("#{word}", 1)
+      word_hashes.store(word, 1)
     end
   end
 
