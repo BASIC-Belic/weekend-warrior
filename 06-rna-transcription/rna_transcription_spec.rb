@@ -22,7 +22,7 @@ describe "RNA Complement Test" do
   end
 
   it "Check rna complement" do
-    skip
+    
     expect('UGCACCAGAAUU').must_equal Complement.of_dna('ACGTGGTCTTAA')
   end
 
