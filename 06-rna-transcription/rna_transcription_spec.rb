@@ -2,7 +2,6 @@ gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
 require 'minitest/pride'
 require_relative 'rna_transcription'
-require 'pry'
 
 describe "RNA Complement Test" do
   it "Check Rna complement of cytosine is guanine" do
@@ -79,7 +78,7 @@ describe "RNA Complement Test" do
   end
 
   it "Check rna raises argument error on partially invalid input" do
-    
+
     expect(proc { Complement.of_rna('UGAAXXXGACAUG') }).must_raise ArgumentError
   end
 end
