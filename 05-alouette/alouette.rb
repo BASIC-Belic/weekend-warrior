@@ -25,33 +25,25 @@ class Alouette
 
   def self.verse(verse_num)
 
-    last_lines = "Alouette!\nAlouette!\nA-a-a-ah\n"
-
-    first_lines =  verse_num.times.map do |index|
-      "Je te plumerai " + LES_PARTIES[index] + "\n"
-    end
-
-    first_lines.map! do |line|
-      line + line
-    end
-
-    verses = first_lines.each_with_index.map do |line, index|
-      line + self.middle_lines(index) + last_lines
-    end
-
-    return verses.reduce("") do |statement, verse|
-      statement + verse
-    end
-
+    last_line = "Alouette!\nAlouette!\nA-a-a-ah"
+    first_line = ("Je te plumerai " + LES_PARTIES[verse_num] + "." + "\n") * 2
+    return first_line + self.middle_lines(verse_num) + last_line
   end
 
   def self.sing
 
-    first_line = "Alouette, gentille alouette,\nAlouette, je te plumerai. \n\n"
+    refrain = "Alouette, gentille alouette,\nAlouette, je te plumerai.\n\n"
 
-    #verse
+    verse_num = 0
+    song = []
 
+    while verse_num < LES_PARTIES.length do
+      song << "#{self.verse(verse_num)}\n"
+      verse_num += 1
+    end
 
+    song = song.reduce(refrain) { |statement, verse| statement + verse + "\n" + refrain }
+    return  song[0...-2]
   end
 
 end
